@@ -10,7 +10,7 @@ public class MusicRepository:IMusicRepository {
     {
         _dbContext = dbContext;
         //_dbContext.Database.EnsureCreated(); // true если база данных создана, false если она уже существует.
-    }
+    } 
     
     public List<MusicModel> GetAll() { 
         if (_dbContext.Musics == null) return new List<MusicModel>();

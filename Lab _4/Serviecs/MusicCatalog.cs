@@ -9,7 +9,7 @@ public class MusicCatalog:IMusicCatalog
     public MusicCatalog(IMusicRepository musicRepository) {
         _musics = musicRepository;
     }
-    
+     
     
     public List<MusicModel> listMusic() {
         Console.WriteLine("All compositions in catalog:");

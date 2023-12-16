@@ -17,7 +17,7 @@ public class MusicController:ControllerBase {
     // add new music to the catalog
     [HttpPost("/add-new-music")]
     public Task Add(string author, string composition) {
-        var _music = new MusicModel() {
+        var _music = new MusicModel() { 
             author = author,
             composition = composition,
             Id = Guid.NewGuid()
