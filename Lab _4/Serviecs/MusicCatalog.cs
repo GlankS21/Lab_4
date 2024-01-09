@@ -11,13 +11,13 @@ public class MusicCatalog:IMusicCatalog
     }
      
     
-    public List<MusicModel> listMusic() {
+    public Task<List<MusicModel>> listMusic() {
         Console.WriteLine("All compositions in catalog:");
         return _musics.GetAll();
     }
 
     public List<Music> seachMusic(string PartOfName) {
-        List<Music> resultMusic = _musics.FindByPartOfName(PartOfName).Select(m => new Music(m.author, m.composition)).ToList();;
+        List<Music> resultMusic = _musics.FindByPartOfName(PartOfName).Result.Select(m => new Music(m.author, m.composition)).ToList();;
         
         if (resultMusic.Count == 0) 
             Console.WriteLine("No one item was found by this criteria.");
@@ -35,7 +35,7 @@ public class MusicCatalog:IMusicCatalog
     }
   
     public bool deleteMusic(string name) { 
-        List<Music> musics = _musics.GetAll().Select(m => {
+        List<Music> musics = _musics.GetAll().Result.Select(m => {
             return new Music(m.author, m.composition);
         }).ToList(); 
          

@@ -28,13 +28,13 @@ public class MusicController:ControllerBase {
     //Get all music from catalog 
     [HttpGet("/get-add-musics")]
     public Task<List<MusicModel>> GetAll() {
-        return Task.FromResult(_musicRepository.GetAll());
+        return Task.FromResult(_musicRepository.GetAll().Result);
     }
     
     //Get music by part of name (composition name)
     [HttpGet("get-by-part-of-composition-name {PartOfName}")]
     public Task<List<MusicModel>> GetByPartOfName(string PartOfName) {
-        return Task.FromResult(_musicRepository.FindByPartOfName(PartOfName));
+        return Task.FromResult(_musicRepository.FindByPartOfName(PartOfName).Result);
     }
     
     //Delete music
