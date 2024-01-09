@@ -8,4 +8,4 @@ public class MusicCatalogContext:DbContext {
     public MusicCatalogContext(DbContextOptions<MusicCatalogContext> options):base(options) {
         Database.EnsureCreated();  
     } 
-}
+} 

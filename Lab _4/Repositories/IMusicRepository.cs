@@ -10,4 +10,4 @@ public interface IMusicRepository {
     public Task AddMusic(MusicModel music); 
     public Task<List<MusicModel>> FindByPartOfName(string PartOfName); 
     public Task DeleteMusic(string title); 
-}
+}  

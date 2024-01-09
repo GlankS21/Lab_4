@@ -38,7 +38,7 @@ public class MusicCatalog:IMusicCatalog
         List<Music> musics = _musics.GetAll().Result.Select(m => {
             return new Music(m.author, m.composition);
         }).ToList(); 
-         
+          
         var find = false;
         for (var i = 0; i < musics.Count; i++) {
             if (musics[i].getMusic() == name) {

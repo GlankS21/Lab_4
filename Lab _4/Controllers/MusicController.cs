@@ -24,7 +24,7 @@ public class MusicController:ControllerBase {
         };
         return _musicRepository.AddMusic(_music);
     }
-      
+       
     //Get all music from catalog 
     [HttpGet("/get-add-musics")]
     public Task<List<MusicModel>> GetAll() {

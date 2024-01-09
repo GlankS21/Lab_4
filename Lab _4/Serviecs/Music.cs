@@ -12,7 +12,7 @@ public class Music
         Console.WriteLine("Input the composition's name:");
         compositionName = Console.ReadLine(); 
         Id = Guid.NewGuid();
-    } 
+    }  
     public Music(string authorName, string compositionName) {
         Id = Guid.NewGuid();
         this.authorName = authorName;
