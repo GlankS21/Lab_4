@@ -8,11 +8,11 @@ public class Music
 
     public Music() { 
         Console.WriteLine("Input author's name:");
-        authorName = Console.ReadLine();
+        authorName = Console.ReadLine(); 
         Console.WriteLine("Input the composition's name:");
         compositionName = Console.ReadLine(); 
         Id = Guid.NewGuid();
-    } 
+    }  
     public Music(string authorName, string compositionName) {
         Id = Guid.NewGuid();
         this.authorName = authorName;

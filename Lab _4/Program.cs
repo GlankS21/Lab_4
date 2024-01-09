@@ -14,7 +14,7 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<MusicCatalogContext>(options => {
     options.UseSqlite(builder.Configuration.GetConnectionString("Lab_4"));
 });
-
+  
 builder.Services.AddTransient<IMusicRepository, MusicRepository>();
 builder.Services.AddTransient<IMusicCatalog, MusicCatalog>();
 
